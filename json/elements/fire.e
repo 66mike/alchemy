@@ -5,6 +5,7 @@
 		"water":"alcohol",
 		"earth":"lava",
 		"air":"energy",
-		"sea":"salt"
+		"sea":"salt",
+		"gasoline":"explosion"
 	}
 }

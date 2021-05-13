@@ -5,6 +5,7 @@
 		"earth":"pressure",
 		"air":"dust",
 		"water":"swamp",
-		"fire":"lava"
+		"fire":"lava",
+		"wind":"sand"
 	}
 }

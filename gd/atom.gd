@@ -73,6 +73,15 @@ func set_position(value: Vector2) -> void:
 	.set_position(value)
 
 
+func translate(offset: Vector2) -> void:
+	var goal = transform.origin + offset
+	var minp = SIZE / 2
+	var maxp = 1024 - minp
+	goal.x = clamp(goal.x, minp, maxp)
+	goal.y = clamp(goal.y, minp, maxp)
+	transform.origin = goal
+
+
 func combine(atom):
 	return Global.combine(element, atom.element)
 

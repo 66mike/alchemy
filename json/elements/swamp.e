@@ -2,6 +2,7 @@
 	"name":"Swamp",
 	"icon":"res://art/tex/earth.png",
 	"combos": {
-		"energy":"life"
+		"energy":"life",
+		"life":"bacteria"
 	}
 }

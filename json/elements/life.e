@@ -3,6 +3,8 @@
 	"icon":"res://art/tex/water.png",
 	"combos": {
 		"fire":"fire elemental",
-		"stone":"egg"
+		"stone":"egg",
+		"swamp":"bacteria",
+		"egg":"chicken"
 	}
 }

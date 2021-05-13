@@ -1,6 +1,35 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://gd/blackboard.gd" type="Script" id=1]
+[ext_resource path="res://res/fonts/andale_mono.tres" type="DynamicFont" id=2]
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 1, 1, 0.372549 )
+border_width_left = 60
+border_width_top = 32
+border_width_right = 60
+border_width_bottom = 32
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+border_blend = true
+corner_radius_top_left = 47
+corner_radius_top_right = 47
+corner_radius_bottom_right = 47
+corner_radius_bottom_left = 47
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 1, 1, 0.74902 )
+border_width_left = 60
+border_width_top = 32
+border_width_right = 60
+border_width_bottom = 32
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+border_blend = true
+corner_radius_top_left = 47
+corner_radius_top_right = 47
+corner_radius_bottom_right = 47
+corner_radius_bottom_left = 47
+
+[sub_resource type="StyleBoxEmpty" id=5]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Button
@@ -27,6 +56,40 @@ func on_pressed():
 
 "
 
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 1, 1, 0.372549 )
+border_width_left = 60
+border_width_top = 32
+border_width_right = 60
+border_width_bottom = 32
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+border_blend = true
+corner_radius_top_left = 47
+corner_radius_top_right = 47
+corner_radius_bottom_right = 47
+corner_radius_bottom_left = 47
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends Button
+
+onready var mk_search = $mk_search
+
+
+func _ready():
+	connect('pressed', self, 'on_pressed')
+	
+	
+func _input(event: InputEvent):
+	pass
+	
+	
+func on_pressed():
+	mk_search.visible = not mk_search.visible
+	
+"
+
 [node name="blackboard" type="Node2D"]
 z_as_relative = false
 script = ExtResource( 1 )
@@ -40,8 +103,43 @@ margin_left = 816.0
 margin_top = 880.0
 margin_right = 976.0
 margin_bottom = 976.0
-text = "X"
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = ExtResource( 2 )
+text = "x"
 script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mk" type="Button" parent="."]
+margin_left = 48.0
+margin_top = 880.0
+margin_right = 208.0
+margin_bottom = 976.0
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+text = "+"
+script = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mk_search" type="LineEdit" parent="mk"]
+visible = false
+margin_left = 304.0
+margin_top = -400.0
+margin_right = 624.0
+margin_bottom = -368.0
+align = 1
+placeholder_text = "name of element"
 __meta__ = {
 "_edit_use_anchors_": false
 }

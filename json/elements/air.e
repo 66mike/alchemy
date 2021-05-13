@@ -5,6 +5,7 @@
 		"air":"wind",
 		"water":"steam",
 		"fire":"energy",
-		"earth":"dust"
+		"earth":"dust",
+		"stone":"sand"
 	}
 }
