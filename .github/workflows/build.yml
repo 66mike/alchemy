@@ -20,19 +20,17 @@ jobs:
         with:
           name: example
           preset: ${{ matrix.platform }}
-          debugMode: "true"
+          debugMode: 'true'
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
           name: alchemy.${{ matrix.platform }}
           path: ${{ github.workspace }}/${{ steps.build.outputs.build }}
       - name: Automatic Releases
-        # You may pin to the exact commit or the version.
-        # uses: marvinpinto/action-automatic-releases@526ce12c6675bbe6e0e9a4169c90d09a3f7ad3e2
         uses: marvinpinto/action-automatic-releases@v1.2.0
         with:
-          # GitHub secret token
           repo_token: '${{ secrets.AUTO_RELEASE }}'
-          automatic_release_tag: 'auto'
+          automatic_release_tag: 'auto-release'
+          title: 'Automatic Release'
           files: |
             *.zip
