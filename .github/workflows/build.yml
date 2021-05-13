@@ -29,7 +29,7 @@ jobs:
       - name: Automatic Releases
         uses: marvinpinto/action-automatic-releases@v1.2.0
         with:
-          repo_token: '${{ secrets.AUTO_RELEASE }}'
+          repo_token: "${{ secrets.AUTO_RELEASE }}"
           automatic_release_tag: 'auto-release'
           title: 'Automatic Release'
           files: |
