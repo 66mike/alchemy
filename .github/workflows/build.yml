@@ -24,7 +24,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: Client - ${{ matrix.platform }}
+          name: alchemy.${{ matrix.platform }}
           path: ${{ github.workspace }}/${{ steps.build.outputs.build }}
       - name: Automatic Releases
         # You may pin to the exact commit or the version.
@@ -32,4 +32,7 @@ jobs:
         uses: marvinpinto/action-automatic-releases@v1.2.0
         with:
           # GitHub secret token
-          repo_token: ${{ secrets.AUTO_RELEASE }}
+          repo_token: '${{ secrets.AUTO_RELEASE }}'
+          automatic_release_tag: 'auto'
+          files: |
+            *.zip
