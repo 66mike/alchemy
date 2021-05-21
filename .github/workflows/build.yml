@@ -22,12 +22,12 @@ jobs:
           name: alchemy
           preset: ${{ matrix.platform }}
           debugMode: 'false'
-      - name: Upload Artifact
-        id: artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: alchemy.${{ matrix.platform }}
-          path: ${{ github.workspace }}/${{ steps.build.outputs.build }}
+      #- name: Upload Artifact
+      #  id: artifact
+      #  uses: actions/upload-artifact@v2
+      #  with:
+      #    name: alchemy.${{ matrix.platform }}
+      #    path: ${{ github.workspace }}/${{ steps.build.outputs.build }}
       - name: Automatic Releases
         id: release
         uses: marvinpinto/action-automatic-releases@v1.2.0
@@ -36,4 +36,4 @@ jobs:
           automatic_release_tag: 'master'
           title: 'Automatic Release'
           files: |
-            ${{ steps.release.outputs.artifact }}
+            ${{ steps.build.outputs.artifact }}
