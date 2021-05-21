@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        platform: [linux, windows, mac]
+        platform: [x86_64, exe, dmg]
     steps:
       - uses: actions/checkout@v2
         with:
@@ -19,7 +19,7 @@ jobs:
         id: build
         uses: josephbmanley/build-godot-action@v1.4.1
         with:
-          name: example
+          name: alchemy
           preset: ${{ matrix.platform }}
           debugMode: 'true'
       - name: Upload Artifact
@@ -34,7 +34,5 @@ jobs:
           automatic_release_tag: 'master'
           title: 'Automatic Release'
           files: |
-            *.exe
-            *.x86_64
-            *.dmg
+            *.${{ matrix.platform }}
             *.zip
