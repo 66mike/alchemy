@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fire.png-5784056c58634300118ae3fc627d047e.stex"
+path="res://.import/explosion.png-a81d5525e476053db46fddd88559e62b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/tex/fire.png"
-dest_files=[ "res://.import/fire.png-5784056c58634300118ae3fc627d047e.stex" ]
+source_file="res://png/explosion.png"
+dest_files=[ "res://.import/explosion.png-a81d5525e476053db46fddd88559e62b.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

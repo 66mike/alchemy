@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/earth.png-7cf913fa9a3ae61a1f20d718dc4e8d0c.stex"
+path="res://.import/wind.png-65eea98907b565b5ac9e9076cb5c3587.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/tex/earth.png"
-dest_files=[ "res://.import/earth.png-7cf913fa9a3ae61a1f20d718dc4e8d0c.stex" ]
+source_file="res://png/wind.png"
+dest_files=[ "res://.import/wind.png-65eea98907b565b5ac9e9076cb5c3587.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

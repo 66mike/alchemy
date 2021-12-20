@@ -15,7 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Alchemy"
-run/main_scene="res://scn/main.tscn"
+run/main_scene="res://tscn/main.tscn"
 
 [autoload]
 
